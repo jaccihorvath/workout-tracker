@@ -52,7 +52,7 @@ const WorkoutSchema = new Schema({
 
 // function to get total duration of exercise
 WorkoutSchema.virtual('totalDuration').get(function () {
-    return this.exercise.reduce((total, exercise) => {
+    return this.exercises.reduce((total, exercise) => {
         return total + exercise.duration;
     }, 0);
 });
