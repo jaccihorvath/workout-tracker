@@ -65,6 +65,7 @@ function populateChart(data) {
       responsive: true,
       title: {
         display: true,
+        text: 'Duration of Workout'
       },
       scales: {
         xAxes: [
@@ -118,7 +119,7 @@ function populateChart(data) {
     options: {
       title: {
         display: true,
-        text: 'Pounds Lifted',
+        text: 'Total Pounds Lifted',
       },
       scales: {
         yAxes: [
