@@ -22,7 +22,7 @@ function generatePalette() {
 }
 
 function populateChart(data) {
-  let durations = data.map(({ totalDuration }) => totalDuration);
+  let durations = calculateTotalDuration(data); //data.map(({ totalDuration }) => totalDuration);
   let pounds = calculateTotalWeight(data);
   let workouts = workoutNames(data);
   const colors = generatePalette();
@@ -183,6 +183,21 @@ function calculateTotalWeight(data) {
       } else {
         return total;
       }
+    }, 0);
+
+    totals.push(workoutTotal);
+  });
+
+  return totals;
+}
+
+function calculateTotalDuration(data) {
+  let totals = [];
+
+  data.forEach((workout) => {
+    const workoutTotal = workout.exercises.reduce((total, { duration }) => {
+        return total + duration;
+
     }, 0);
 
     totals.push(workoutTotal);
