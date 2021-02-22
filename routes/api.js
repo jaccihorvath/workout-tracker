@@ -19,10 +19,6 @@ router.put('/api/workouts/:id', ({ body, params }, res) => {
             $push: { exercises: body }
         },
         {
-            $inc: { totalDuration: req.body.duration },
-            $push: { exercises: body }
-        },
-        {
             new: true
         }).then(dbWorkout => {
             res.json(dbWorkout);
