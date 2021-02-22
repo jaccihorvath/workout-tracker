@@ -196,12 +196,12 @@ function calculateTotalDuration(data) {
   let totals = [];
 
   data.forEach((workout) => {
-    const workoutTotal = workout.exercises.reduce((total, { duration }) => {
+    const durationTotal = workout.exercises.reduce((total, { duration }) => {
         return total + duration;
 
     }, 0);
 
-    totals.push(workoutTotal);
+    totals.push(durationTotal);
   });
 
   return totals;
