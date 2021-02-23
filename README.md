@@ -1,5 +1,5 @@
 ![License Badge](https://img.shields.io/github/license/jaccihorvath/workout-tracker)
-# Workout Tracker!
+# Workout Tracker
 
 ## Description
 In this repository you will find a workout tracker where users will be able to view, create and track daily workouts. 
